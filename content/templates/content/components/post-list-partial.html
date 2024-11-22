@@ -1,0 +1,39 @@
+{% for post in posts %}
+    <div class="col-sm-6 col-lg-6 col-xl-6">
+
+        <div class="card bg-transparent">
+            <div class="overflow-hidden rounded-3">
+                <img src="{{ post.image.url }}"
+                     class="card-img" alt="{{ post.title }}"
+                     loading="lazy">
+                <!-- Overlay -->
+                <div class="bg-overlay bg-dark opacity-1"></div>
+                <div class="card-img-overlay d-flex align-items-start p-3">
+                    <!-- badge -->
+                    <a href="/blog/?category=django" class="badge text-bg-danger">django</a>
+                </div>
+            </div>
+
+            <!-- Card body -->
+            <div class="card-body">
+                <!-- Title -->
+                <h5 class="card-title fw-normal"><a
+                        href="{{ post.get_absolute_url }}">{{ post.title }}</a></h5>
+                <p class="text-truncate-2">خوب رسیدیم به بخش ترسناکی که برای خیلی ها می تونه
+                    کابوس
+                    باشه اونم انتقال پروژه از یک پلتفرم به پلتفرم دیگه، اما با این ویدئو
+                    مسائل
+                    رو
+                    براتون خیلی…</p>
+                <!-- Info -->
+                <div class="d-flex justify-content-between">
+                    <h6 class="mb-0 fw-normal"><a href="#">علی بیگدلی</a>
+                    </h6>
+                    <span class="small">1403/05/28  <i
+                            class="far fa-calendar-alt"></i></span>
+                    <span class="small"> 480 <i class="fas fa-eye"></i></span>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endfor %}

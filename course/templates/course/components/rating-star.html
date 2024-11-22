@@ -1,0 +1,63 @@
+{% if course.average_rating >= 1 and course.average_rating < 2 %}
+    <li class="list-inline-item me-0 small"><i
+            class="fas fa-star text-warning"></i>
+    </li>
+    <li class="list-inline-item me-0 small"><i
+            class="far fa-star text-warning"></i>
+    </li>
+{% elif course.average_rating >= 2 and course.average_rating < 3 %}
+    <li class="list-inline-item me-0 small"><i
+            class="fas fa-star text-warning"></i>
+    </li>
+    <li class="list-inline-item me-0 small"><i
+            class="fas fa-star text-warning"></i>
+    </li>
+{% elif course.average_rating >= 3 and course.average_rating < 4 %}
+    <li class="list-inline-item me-0 small"><i
+            class="fas fa-star text-warning"></i>
+    </li>
+    <li class="list-inline-item me-0 small"><i
+            class="fas fa-star text-warning"></i>
+    </li>
+    <li class="list-inline-item me-0 small"><i
+            class="fas fa-star text-warning"></i>
+    </li>
+    <li class="list-inline-item me-0 small"><i
+            class="far fa-star text-warning"></i>
+    </li>
+{% elif course.average_rating >= 4 and course.average_rating < 5 %}
+    <li class="list-inline-item me-0 small"><i
+            class="fas fa-star text-warning"></i>
+    </li>
+    <li class="list-inline-item me-0 small"><i
+            class="fas fa-star text-warning"></i>
+    </li>
+    <li class="list-inline-item me-0 small"><i
+            class="fas fa-star text-warning"></i>
+    </li>
+    <li class="list-inline-item me-0 small"><i
+            class="fas fa-star text-warning"></i>
+    </li>
+    <li class="list-inline-item me-0 small"><i
+            class="far fa-star text-warning"></i>
+    </li>
+{% elif course.average_rating <= 5 %}
+    <li class="list-inline-item me-0 small"><i
+            class="fas fa-star text-warning"></i>
+    </li>
+    <li class="list-inline-item me-0 small"><i
+            class="fas fa-star text-warning"></i>
+    </li>
+    <li class="list-inline-item me-0 small"><i
+            class="fas fa-star text-warning"></i>
+    </li>
+    <li class="list-inline-item me-0 small"><i
+            class="fas fa-star text-warning"></i>
+    </li>
+    <li class="list-inline-item me-0 small"><i
+            class="fas fa-star text-warning"></i>
+    </li>
+{% endif %}
+<li class="list-inline-item ms-2 h6 fw-light mb-0">
+    5 / {{ course.average_rating|default:3.5 }}
+</li>
